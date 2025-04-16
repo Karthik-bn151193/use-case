@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'albpath/**'
+      - '.github/workflows/**'
 
 env:
   AWS_REGION: "us-east-1"
