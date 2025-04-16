@@ -1,7 +1,7 @@
 name: ALB usecase
 
 on:
-  push:
+ push:
     branches:
       - main
     paths:
