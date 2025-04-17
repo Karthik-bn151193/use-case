@@ -49,9 +49,9 @@ jobs:
 
       - name: Terraform Apply
         id: apply
-        if: github.ref == 'refs/heads/albpath/modules/main.tf' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/albpath' && github.event_name == 'push'
         run: cd albpath && terraform apply -auto-approve -no-color -input=false
 
       - name: Output ALB DNS Name
-        if: github.ref == 'refs/heads/albpath/modules/main.tf' && github.event_name == 'push' && steps.apply.outcome == 'success'
+        if: github.ref == 'refs/heads/albpath' && github.event_name == 'push' && steps.apply.outcome == 'success'
         run: cd albpath && terraform output alb_dns_name
