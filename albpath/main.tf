@@ -1,6 +1,7 @@
 module "vpc" {
   source = "./modules/vpc"
   region = "us-east-1"
+#This is root module
 }
 
 
